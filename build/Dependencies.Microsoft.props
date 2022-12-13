@@ -1,34 +1,34 @@
 <Project>
-  <PropertyGroup Label="Package Versions">
-    <AspNetCoreVersion>5.0.12</AspNetCoreVersion>
+	<PropertyGroup Label="Package Versions">
+		<AspNetCoreVersion>5.0.12</AspNetCoreVersion>
 
-    <MicrosoftAspNetCoreAuthenticationFacebookPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationFacebookPackageVersion>
-    <MicrosoftAspNetCoreAuthenticationGooglePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationGooglePackageVersion>
-    <MicrosoftAspNetCoreAuthenticationTwitterPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationTwitterPackageVersion>
-    <MicrosoftAspNetCoreAuthenticationMicrosoftAccountPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationMicrosoftAccountPackageVersion>
-    <MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion>
+		<MicrosoftAspNetCoreAuthenticationFacebookPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationFacebookPackageVersion>
+		<MicrosoftAspNetCoreAuthenticationGooglePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationGooglePackageVersion>
+		<MicrosoftAspNetCoreAuthenticationTwitterPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationTwitterPackageVersion>
+		<MicrosoftAspNetCoreAuthenticationMicrosoftAccountPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationMicrosoftAccountPackageVersion>
+		<MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion>
 
-    <MicrosoftAspNetCoreDataProtectionAzureStoragePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreDataProtectionAzureStoragePackageVersion>
-    <MicrosoftAspNetCoreDataProtectionStackExchangeRedisPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreDataProtectionStackExchangeRedisPackageVersion>
+		<MicrosoftAspNetCoreDataProtectionAzureStoragePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreDataProtectionAzureStoragePackageVersion>
+		<MicrosoftAspNetCoreDataProtectionStackExchangeRedisPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreDataProtectionStackExchangeRedisPackageVersion>
 
-    <MicrosoftAspNetCoreMvcNewtonsoftJsonPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcNewtonsoftJsonPackageVersion>
-    <MicrosoftAspNetCoreMvcRazorRuntimeCompilationPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcRazorRuntimeCompilationPackageVersion>
-    <MicrosoftAspNetCoreMvcTestingPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcTestingPackageVersion>
+		<MicrosoftAspNetCoreMvcNewtonsoftJsonPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcNewtonsoftJsonPackageVersion>
+		<MicrosoftAspNetCoreMvcRazorRuntimeCompilationPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcRazorRuntimeCompilationPackageVersion>
+		<MicrosoftAspNetCoreMvcTestingPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcTestingPackageVersion>
 
-    <MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion>
-    <MicrosoftEntityFrameworkCorePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCorePackageVersion>
-    <MicrosoftEntityFrameworkCoreAbstractionsPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreAbstractionsPackageVersion>
-    <MicrosoftEntityFrameworkCoreSqlServerPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqlServerPackageVersion>
-    <MicrosoftEntityFrameworkCoreSqlitePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqlitePackageVersion>
-    <MicrosoftEntityFrameworkCoreSqliteCorePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqliteCorePackageVersion>
-    <MicrosoftEntityFrameworkCoreRelationalPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreRelationalPackageVersion>
-    <MicrosoftEntityFrameworkCoreAnalyzersPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreAnalyzersPackageVersion>
-    <MicrosoftEntityFrameworkCoreInMemoryPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreInMemoryPackageVersion>
-    <MicrosoftEntityFrameworkCoreDesignPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreDesignPackageVersion>
-    <MicrosoftEntityFrameworkCoreToolsPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreToolsPackageVersion>
+		<MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion>
+		<MicrosoftEntityFrameworkCorePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCorePackageVersion>
+		<MicrosoftEntityFrameworkCoreAbstractionsPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreAbstractionsPackageVersion>
+		<MicrosoftEntityFrameworkCoreSqlServerPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqlServerPackageVersion>
+		<MicrosoftEntityFrameworkCoreSqlitePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqlitePackageVersion>
+		<MicrosoftEntityFrameworkCoreSqliteCorePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqliteCorePackageVersion>
+		<MicrosoftEntityFrameworkCoreRelationalPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreRelationalPackageVersion>
+		<MicrosoftEntityFrameworkCoreAnalyzersPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreAnalyzersPackageVersion>
+		<MicrosoftEntityFrameworkCoreInMemoryPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreInMemoryPackageVersion>
+		<MicrosoftEntityFrameworkCoreDesignPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreDesignPackageVersion>
+		<MicrosoftEntityFrameworkCoreToolsPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreToolsPackageVersion>
 
-    <MicrosoftAspNetCoreOwinPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreOwinPackageVersion>
-    <MicrosoftExtensionsCachingStackExchangeRedisPackageVersion>$(AspNetCoreVersion)</MicrosoftExtensionsCachingStackExchangeRedisPackageVersion>
-    <MicrosoftExtensionsHttpPollyPackageVersion>$(AspNetCoreVersion)</MicrosoftExtensionsHttpPollyPackageVersion>
-  </PropertyGroup>
+		<MicrosoftAspNetCoreOwinPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreOwinPackageVersion>
+		<MicrosoftExtensionsCachingStackExchangeRedisPackageVersion>$(AspNetCoreVersion)</MicrosoftExtensionsCachingStackExchangeRedisPackageVersion>
+		<MicrosoftExtensionsHttpPollyPackageVersion>$(AspNetCoreVersion)</MicrosoftExtensionsHttpPollyPackageVersion>
+	</PropertyGroup>
 </Project>

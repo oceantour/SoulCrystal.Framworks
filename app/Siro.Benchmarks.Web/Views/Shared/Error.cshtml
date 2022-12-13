@@ -1,0 +1,93 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .outer {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        background: linear-gradient(#14ffe0,#ffeb3b,#ff00e0);
+        border-radius: 50%;
+        animation: rotate 1.5s linear infinite;
+    }
+
+    .inner {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        background: #FFF;
+        border-radius: 50%;
+        z-index: 9;
+        opacity: 0.15;
+    }
+
+    .outer span {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        background: linear-gradient(#14ffe0,#ffeb3b,#ff00e0);
+        border-radius: 50%;
+    }
+
+    @@keyframes rotate {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    span:nth-child(1) {
+        filter: blur(5px);
+    }
+
+    span:nth-child(2) {
+        filter: blur(10px);
+    }
+
+    span:nth-child(3) {
+        filter: blur(45px);
+    }
+
+    span:nth-child(4) {
+        filter: blur(150px);
+    }
+</style>
+
+
+<body>
+    <h1 class="text-danger">Error.</h1>
+    <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <h3>Development Mode</h3>
+
+    <p>
+        Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+    </p>
+
+    <div class="outer">
+        <div class="inner"></div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>

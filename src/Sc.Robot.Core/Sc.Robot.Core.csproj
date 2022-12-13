@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>Ihei.Robot</RootNamespace>
+		<AssemblyName>Ihei.Robot.Abstractions</AssemblyName>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Title>Ihei.Robot.Abstractions</Title>
+		<PackageId>Ihei.Robot.Abstractions</PackageId>
+		<Description>Ihei.Robot.Abstractions</Description>
+		<PackageTags>ihei</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Sc.Annotations\Sc.Robot.Abstractions.csproj" />
+	</ItemGroup>
+
+
+</Project>

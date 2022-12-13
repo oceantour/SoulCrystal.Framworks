@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sc.Benchmark
+namespace SoulCrystal.Benchmark
 {
     internal class Program
     {
