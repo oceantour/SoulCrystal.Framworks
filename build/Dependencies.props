@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup Label="Package Versions">
+    <SystemDataSqlClientPackageVersion>4.8.2</SystemDataSqlClientPackageVersion>
+    <SystemDataSQLiteCorePackageVersion>1.0.115</SystemDataSQLiteCorePackageVersion>
+  </PropertyGroup>
+</Project>

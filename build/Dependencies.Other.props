@@ -1,0 +1,33 @@
+<Project>
+  <PropertyGroup Label="Package Versions">
+    <!-- 日志 -->
+    <NLogVersion>5.0.0-preview.1</NLogVersion>
+    <NLogPackageVersion>$(NLogVersion)</NLogPackageVersion>
+    <NLogWebAspNetCorePackageVersion>4.14.0</NLogWebAspNetCorePackageVersion>
+    <NLogExtensionsLoggingPackageVersion>$(NLogVersion)</NLogExtensionsLoggingPackageVersion>
+
+    <!-- 时间 -->
+    <ncrontabPackageVersion>3.3.1</ncrontabPackageVersion>
+    <NodaTimePackageVersion>3.0.5</NodaTimePackageVersion>
+
+    <!-- Json -->
+    <SpanJsonPackageVersion>3.1.0</SpanJsonPackageVersion>
+    <NewtonsoftJsonPackageVersion>13.0.1</NewtonsoftJsonPackageVersion>
+
+    <!-- YesSql -->
+    <YesSqlVersion>3.0.7</YesSqlVersion>
+    <YesSqlAbstractionsPackageVersion>$(YesSqlVersion)</YesSqlAbstractionsPackageVersion>
+    <YesSqlCorePackageVersion>$(YesSqlVersion)</YesSqlCorePackageVersion>
+    <YesSqlProviderSqlServerPackageVersion>$(YesSqlVersion)</YesSqlProviderSqlServerPackageVersion>
+    <YesSqlProviderMySqlPackageVersion>$(YesSqlVersion)</YesSqlProviderMySqlPackageVersion>
+    <YesSqlProviderSqLitePackageVersion>$(YesSqlVersion)</YesSqlProviderSqLitePackageVersion>
+    <YesSqlProviderPostgreSqlPackageVersion>$(YesSqlVersion)</YesSqlProviderPostgreSqlPackageVersion>
+    
+    <AutoMapperPackageVersion>10.1.1</AutoMapperPackageVersion>
+
+    <!-- 单元测试 -->
+    <xunitPackageVersion>2.3.1</xunitPackageVersion>
+    <xunitanalyzersPackageVersion>0.10.0</xunitanalyzersPackageVersion>
+    <xunitrunnervisualstudioPackageVersion>2.3.1</xunitrunnervisualstudioPackageVersion>
+  </PropertyGroup>
+</Project>

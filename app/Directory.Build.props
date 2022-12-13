@@ -1,0 +1,12 @@
+<Project>
+	<!-- Import parent Directory.build.props -->
+	<Import Project="..\Directory.Build.props" />
+
+	<PropertyGroup>
+		<SignAssembly>false</SignAssembly>
+		<IsPackable>false</IsPackable>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+
+</Project>
