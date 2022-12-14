@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 
-namespace Siro.Benchmark.TryCode
+namespace SoulCrystal.FileOperation
 {
     /// <summary> 整理文件 </summary>
-    public class SortingFile
+    internal class SortingFIle
     {
         /// <summary> 根据创建日期整理</summary>
         /// <param name="sourcePath"> 源路径 </param>

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.Other
 {
-    public class MyDateTime
+    internal class OverdueTime
     {
         public static void PriDateTime(DateTime OverdueTime)
         {

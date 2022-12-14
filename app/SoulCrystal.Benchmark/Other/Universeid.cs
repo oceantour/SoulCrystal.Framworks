@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace SoulCrystal
+namespace SoulCrystal.Other
 {
     /// <summary> Universe 类型 ID，存在任意地方在过去至未来的唯一标识 </summary>
     public readonly partial struct Universeid : INullable

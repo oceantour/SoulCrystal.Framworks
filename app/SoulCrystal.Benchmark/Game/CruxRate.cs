@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.Game
 {
-    public class Game
+    public class CruxRate
     {
-        public static void GameCritialHitRateTest(double rate, int number = 100)
+        public static void HitRate(double rate, int number = 100)
         {
             int hit = 0, noHit = 0;
 

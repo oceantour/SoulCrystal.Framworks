@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.Other
 {
-    public class ED
+    internal class EDCryption
     {
         public const int Rand = 590127;
         public const int DividEnd = 7;

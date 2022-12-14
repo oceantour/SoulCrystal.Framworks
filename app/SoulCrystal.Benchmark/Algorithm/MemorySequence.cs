@@ -1,7 +1,8 @@
-﻿namespace Siro.Benchmark.InMath
+﻿namespace SoulCrystal.Algorithm
 {
     /// <summary> 记忆序列 </summary>
-    public class MemorySequence
+    /// <remarks> 概念未完善 </remarks>
+    internal class MemorySequence
     {
         private readonly char[] _NumberSeeds = new char[10]
         {
@@ -23,16 +24,11 @@
         };
 
         private readonly char[] _SymbolsSeeds = new char[]
-        { 
-            ' ', '!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', 
-            ':', ';', '<', '=', '>', '?', '@', 
+        {
+            ' ', '!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/',
+            ':', ';', '<', '=', '>', '?', '@',
             '[', '\\', ']', '^', '_', '`',
             '{', '|', '}', '~'
         };
-
-        public void 计算()
-        { 
-            
-        }
     }
 }

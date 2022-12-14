@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using ClosedXML.Excel;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.FileOperation
 {
     public class GenarateFile
     {
@@ -78,7 +78,7 @@ namespace Siro.Benchmark.Other
                     {
                         var GenaratePackage = $"{SR.DataPackage}Area_Data{i}{SR.Suffixs[1]}";
                         if (File.Exists(GenaratePackage)) continue;
-                        filePackagea = GenaratePackage; break;;
+                        filePackagea = GenaratePackage; break; ;
                     }
                     workbook.SaveAs(filePackagea);
                 }

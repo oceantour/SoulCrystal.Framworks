@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.Other
 {
     public class SemaphoreTest
     {

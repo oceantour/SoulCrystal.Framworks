@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 
-namespace Siro.Benchmark.InMath
+namespace SoulCrystal.Algorithm
 {
-    public class OnlyRandom
+    internal class OnlyRandom
     {
         //public void Main()
         //{

@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using ClosedXML.Excel;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.FileOperation
 {
     public class RegionalRead
     {
@@ -22,7 +22,7 @@ namespace Siro.Benchmark.Other
         public class Town : District { public string DistrictCode { get; set; } }
 
         public class Regional
-        { 
+        {
             public string Name { get; set; }
             public List<Regional> Regionals { get; set; }
         }

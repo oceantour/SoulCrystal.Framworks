@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.FileOperation
 {
     public static class SR
     {

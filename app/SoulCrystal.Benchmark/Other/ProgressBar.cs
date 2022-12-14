@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Siro.Benchmark.Other
+namespace SoulCrystal.Other
 {
     /// <summary>
     /// 进度条类型
@@ -57,16 +57,16 @@ namespace Siro.Benchmark.Other
 
         public ProgressBar(int left, int top, int width = 100, ProgressBarType progressBarType = ProgressBarType.Multicolor)
         {
-            this.Left = left;
-            this.Top = top;
-            this.Width = width;
-            this.ProgressBarType = progressBarType;
+            Left = left;
+            Top = top;
+            Width = width;
+            ProgressBarType = progressBarType;
 
             // 清空显示区域；
             Console.SetCursorPosition(Left, Top);
             for (int i = left; ++i < Console.WindowWidth;) { Console.Write(" "); }
 
-            if (this.ProgressBarType == ProgressBarType.Multicolor)
+            if (ProgressBarType == ProgressBarType.Multicolor)
             {
                 // 绘制进度条背景； 
                 colorBack = Console.BackgroundColor;
@@ -77,7 +77,7 @@ namespace Siro.Benchmark.Other
 
                 // 更新进度百分比,原理同上.                 
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.SetCursorPosition(this.Left + this.Width + 1, this.Top);
+                Console.SetCursorPosition(Left + Width + 1, Top);
                 Console.Write("0%");
                 Console.ForegroundColor = colorFore;
             }
@@ -93,35 +93,35 @@ namespace Siro.Benchmark.Other
 
         public int Dispaly(int value, string msg = null)
         {
-            if (this.Value != value)
+            if (Value != value)
             {
-                this.Value = value;
+                Value = value;
 
-                if (this.ProgressBarType == ProgressBarType.Multicolor)
+                if (ProgressBarType == ProgressBarType.Multicolor)
                 {
                     // 保存背景色与前景色；
                     colorBack = Console.BackgroundColor;
                     colorFore = Console.ForegroundColor;
                     // 绘制进度条进度                
                     Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.SetCursorPosition(this.Left, this.Top);
-                    Console.Write(new string(' ', (int)Math.Round(this.Value / (100.0 / this.Width))));
+                    Console.SetCursorPosition(Left, Top);
+                    Console.Write(new string(' ', (int)Math.Round(Value / (100.0 / Width))));
                     Console.BackgroundColor = colorBack;
 
                     // 更新进度百分比,原理同上.                 
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.SetCursorPosition(this.Left + this.Width + 1, this.Top);
-                    if (string.IsNullOrWhiteSpace(msg)) { Console.Write("{0}%", this.Value); } else { Console.Write(msg); }
+                    Console.SetCursorPosition(Left + Width + 1, Top);
+                    if (string.IsNullOrWhiteSpace(msg)) { Console.Write("{0}%", Value); } else { Console.Write(msg); }
                     Console.ForegroundColor = colorFore;
                 }
                 else
                 {
                     // 绘制进度条进度      
-                    Console.SetCursorPosition(this.Left + 1, this.Top);
-                    Console.Write(new string('*', (int)Math.Round(this.Value / (100.0 / (this.Width - 2)))));
+                    Console.SetCursorPosition(Left + 1, Top);
+                    Console.Write(new string('*', (int)Math.Round(Value / (100.0 / (Width - 2)))));
                     // 显示百分比   
-                    Console.SetCursorPosition(this.Left + this.Width + 1, this.Top);
-                    if (string.IsNullOrWhiteSpace(msg)) { Console.Write("{0}%", this.Value); } else { Console.Write(msg); }
+                    Console.SetCursorPosition(Left + Width + 1, Top);
+                    if (string.IsNullOrWhiteSpace(msg)) { Console.Write("{0}%", Value); } else { Console.Write(msg); }
                 }
             }
             return value;

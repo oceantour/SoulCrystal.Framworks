@@ -1,4 +1,4 @@
-﻿namespace SoulCrystal
+﻿namespace SoulCrystal.Other
 {
     using System;
     using System.Collections.Generic;
@@ -6,7 +6,7 @@
     using System.Runtime.InteropServices;
 
     [ComVisible(true)]
-    public sealed class SiroOrigin
+    public sealed class SoulCrystalOrigin
     {
         #region @@ 创作 @@
 
