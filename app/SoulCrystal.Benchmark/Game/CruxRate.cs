@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SoulCrystal.Game
+﻿namespace SoulCrystal.Game
 {
     public class CruxRate
     {

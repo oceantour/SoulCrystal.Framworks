@@ -1,8 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace SoulCrystal.Other
+﻿namespace SoulCrystal.Other
 {
     public class SemaphoreTest
     {

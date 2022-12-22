@@ -1,9 +1,6 @@
-﻿using System;
-using System.Data.SqlTypes;
-using System.Linq;
+﻿using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Threading;
 
 namespace SoulCrystal.Other
 {

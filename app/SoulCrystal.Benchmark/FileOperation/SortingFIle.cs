@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-
-namespace SoulCrystal.FileOperation
+﻿namespace SoulCrystal.FileOperation
 {
     /// <summary> 整理文件 </summary>
     internal class SortingFIle

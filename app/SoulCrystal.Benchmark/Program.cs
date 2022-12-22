@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SoulCrystal.Benchmark
+﻿namespace SoulCrystal.Benchmark
 {
     internal class Program
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SoulCrystal.Other
+﻿namespace SoulCrystal.Other
 {
     internal class OverdueTime
     {

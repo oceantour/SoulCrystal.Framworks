@@ -32,8 +32,8 @@
 	<PropertyGroup>
 		<AspNetTargetFramework>net6.0</AspNetTargetFramework>
 		<TargetFramework>net6.0</TargetFramework>
-		<ImplicitUsings>disable</ImplicitUsings>
-		<Nullable>disable</Nullable>
+		<ImplicitUsings>true</ImplicitUsings>
+		<Nullable>annotations</Nullable>
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>$(SourceRoot)/build/StrongKey.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>

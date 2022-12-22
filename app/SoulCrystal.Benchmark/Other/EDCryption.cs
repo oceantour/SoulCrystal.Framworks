@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace SoulCrystal.Other
+﻿namespace SoulCrystal.Other
 {
     internal class EDCryption
     {

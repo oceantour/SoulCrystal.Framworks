@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
-
-namespace SoulCrystal.FileOperation
+﻿namespace SoulCrystal.FileOperation
 {
     public static class SR
     {

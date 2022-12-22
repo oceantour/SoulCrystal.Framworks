@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<RootNamespace>SoulCrystal</RootNamespace>
 		<OutputType>Exe</OutputType>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SoulCrystal.Other
+﻿namespace SoulCrystal.Other
 {
     /// <summary>
     /// 进度条类型
