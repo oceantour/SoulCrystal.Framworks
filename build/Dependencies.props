@@ -5,7 +5,9 @@
 
 	<!-- The version referencing these nuget packages is net6.0 -->
 	<PropertyGroup>
-		<NLogVersion>5.2</NLogVersion>
+		<NLogVersion>5.1.0</NLogVersion>
+		<NLogWebVersion>5.2.0</NLogWebVersion>
+		
 		<SpanJsonVersion>4.0.0</SpanJsonVersion>
 		<YesSqlVersion>3.3.0</YesSqlVersion>
 		<ServiceStackVersion>6.5.0</ServiceStackVersion>
@@ -14,12 +16,13 @@
 
 	<ItemGroup>
 		<PackageManagement Include="NLog" Version="$(NLogVersion)" />
-		<PackageManagement Include="NLog.Web" Version="$(NLogVersion)" />
-		<PackageManagement Include="NLog.Web.AspNetCore" Version="$(NLogVersion)" />
-		<PackageManagement Include="NLog.Extensions.Logging" Version="$(NLogVersion)" />
+		<PackageManagement Include="NLog.Schema" Version="$(NLogVersion)" />
+		<PackageManagement Include="NLog.WindowsEventLog" Version="$(NLogVersion)" />
 
-		<PackageManagement Include="NLog.Schema" Version="5.1.0" />
-		<PackageManagement Include="NLog.WindowsEventLog" Version="5.1.0" />
+		<PackageManagement Include="NLog.Web" Version="$(NLogWebVersion)" />
+		<PackageManagement Include="NLog.Web.AspNetCore" Version="$(NLogWebVersion)" />
+		<PackageManagement Include="NLog.Extensions.Logging" Version="$(NLogWebVersion)" />
+		
 		<PackageManagement Include="NLog.Targets.Syslog" Version="7.0.0" />
 	</ItemGroup>
 

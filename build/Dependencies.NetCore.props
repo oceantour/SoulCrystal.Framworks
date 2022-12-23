@@ -24,6 +24,7 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
+	<!-- Add features based on compilation -->
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|$(AspNetTargetFramework)|anycpu'">
 		<Optimize>false</Optimize>
 		<DebugSymbols>True</DebugSymbols>
