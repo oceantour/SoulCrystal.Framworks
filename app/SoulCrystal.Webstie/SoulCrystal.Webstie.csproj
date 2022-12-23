@@ -6,7 +6,23 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Remove="App_Data\**;Localization\**" />
+		<Content Remove="App_Data\**;Localization\**" />
+		<EmbeddedResource Remove="App_Data\**;Localization\**" />
+		<None Remove="App_Data\**;Localization\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Localization\" />
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+	
+	<ItemGroup>
 	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\SoulCrystal.Logging.NLog\SoulCrystal.Logging.NLog.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

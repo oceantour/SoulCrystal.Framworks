@@ -1,3 +1,5 @@
+using SoulCrystal.Logging;
+
 namespace SoulCrystal.Webstie;
 
 public class Program
@@ -7,6 +9,8 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Logging.ClearProviders();
+
+        builder.WebHost.UseNLogWeb();
 
         builder.Services
             .AddControllersWithViews()

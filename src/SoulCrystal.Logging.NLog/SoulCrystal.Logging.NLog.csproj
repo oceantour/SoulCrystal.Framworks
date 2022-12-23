@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>SoulCrystal.Logging</RootNamespace>
+		<AssemblyName>SoulCrystal.Logging.NLog</AssemblyName>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>SoulCrystal.Logging.NLog</PackageId>
+		<Title>SoulCrystal.Logging.NLog</Title>
+		<Description>SoulCrystal.Logging.NLog</Description>
+		<PackageTags>soul crystal</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NLog.Web.AspNetCore" />
+	</ItemGroup>
+
+</Project>
