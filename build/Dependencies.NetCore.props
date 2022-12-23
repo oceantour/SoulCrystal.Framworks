@@ -1,0 +1,40 @@
+<Project>
+	<!-- Set general labels for items -->
+	<PropertyGroup>
+		<SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<!-- Set information about assembly generation -->
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>true</ImplicitUsings>
+		<Nullable>annotations</Nullable>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>$(SourceRoot)/StrongKey.snk</AssemblyOriginatorKeyFile>
+
+		<!-- Set information about generic compilation -->
+		<LangVersion>10.0</LangVersion>
+		<PlatformTarget>anycpu</PlatformTarget>
+		<Prefer32Bit>false</Prefer32Bit>
+		<TieredCompilation>true</TieredCompilation>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsNotAsErrors>612,618</WarningsNotAsErrors>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|$(AspNetTargetFramework)|anycpu'">
+		<Optimize>false</Optimize>
+		<DebugSymbols>True</DebugSymbols>
+		<DebugType>portable</DebugType>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|$(AspNetTargetFramework)|anycpu'">
+		<Optimize>true</Optimize>
+		<DebugType>portable</DebugType>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+</Project>

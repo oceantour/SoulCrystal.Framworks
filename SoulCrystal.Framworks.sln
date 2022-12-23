@@ -11,22 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builder", "Builder", "{2311
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PackageVersions", "PackageVersions", "{68F67BA5-0EB2-46DB-8788-B83B8FF00A28}"
-	ProjectSection(SolutionItems) = preProject
 		build\Dependencies.Microsoft.props = build\Dependencies.Microsoft.props
-		build\Dependencies.Other.props = build\Dependencies.Other.props
 		build\Dependencies.props = build\Dependencies.props
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Props", "Props", "{3731EC2F-5D57-4647-9F0B-7069FA1EBAF6}"
-	ProjectSection(SolutionItems) = preProject
-		Directory.Build.props = Directory.Build.props
-		app\Directory.Build.props = app\Directory.Build.props
-		src\Directory.Build.props = src\Directory.Build.props
-		Directory.Build.targets = Directory.Build.targets
+		build\Dependencies.NetCore.props = build\Dependencies.NetCore.props
+		README.md = README.md
+		build\SoulCrystal.Commons.props = build\SoulCrystal.Commons.props
+		build\SoulCrystal.Commons.targets = build\SoulCrystal.Commons.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{FD76AD63-49CA-48B7-81B1-1EEDCEAF3A42}"
@@ -44,6 +34,18 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulCrystal.Core", "src\SoulCrystal.Core\SoulCrystal.Core.csproj", "{9FDF14F7-8C5F-4564-9A48-12F395AD856A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulCrystal.Webstie", "app\SoulCrystal.Webstie\SoulCrystal.Webstie.csproj", "{5EFBBACF-6D2D-44EC-8B77-62EB73EB5275}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoulCrystal.App", "SoulCrystal.App", "{501437D3-2638-4B2A-8F0B-EC01D1485406}"
+	ProjectSection(SolutionItems) = preProject
+		app\Directory.Build.props = app\Directory.Build.props
+		app\Directory.Build.targets = app\Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoulCrystal.Core", "SoulCrystal.Core", "{97771133-EF81-4FCE-96E5-E503A3F8CB5C}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Build.targets = src\Directory.Build.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,14 +83,14 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{17248CB6-4FD1-4BDC-92B1-D61CF7B1A6CF} = {0176B169-DC4C-44AD-B7A6-1EA43E915B3D}
-		{68F67BA5-0EB2-46DB-8788-B83B8FF00A28} = {2311E9D5-382A-4124-A1E5-7C338D5D79FA}
-		{3731EC2F-5D57-4647-9F0B-7069FA1EBAF6} = {2311E9D5-382A-4124-A1E5-7C338D5D79FA}
 		{90C0DC5A-5D34-4CF1-BEF7-D893F5A2305E} = {FD76AD63-49CA-48B7-81B1-1EEDCEAF3A42}
 		{B4A8B7F7-B5D1-4F20-B9BE-8575C73DAC79} = {66C3F088-5F93-4023-98C6-CE85FC1CE6A8}
 		{C843F007-B7EA-4E11-98E7-49DFED9FDF20} = {0176B169-DC4C-44AD-B7A6-1EA43E915B3D}
 		{F574BB9F-C186-44CF-B344-D9B68D0E9563} = {B4A8B7F7-B5D1-4F20-B9BE-8575C73DAC79}
 		{9FDF14F7-8C5F-4564-9A48-12F395AD856A} = {B4A8B7F7-B5D1-4F20-B9BE-8575C73DAC79}
 		{5EFBBACF-6D2D-44EC-8B77-62EB73EB5275} = {0176B169-DC4C-44AD-B7A6-1EA43E915B3D}
+		{501437D3-2638-4B2A-8F0B-EC01D1485406} = {2311E9D5-382A-4124-A1E5-7C338D5D79FA}
+		{97771133-EF81-4FCE-96E5-E503A3F8CB5C} = {2311E9D5-382A-4124-A1E5-7C338D5D79FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {17C3BB67-E655-4515-B72E-FA03A1FBEB3F}

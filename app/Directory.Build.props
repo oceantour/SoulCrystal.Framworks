@@ -1,6 +1,5 @@
 <Project>
-	<!-- Import parent Directory.build.props -->
-	<Import Project="..\Directory.Build.props" />
+	<Import Project="..\build\SoulCrystal.Commons.props" />
 
 	<PropertyGroup>
 		<SignAssembly>false</SignAssembly>
@@ -8,5 +7,4 @@
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
-
 </Project>

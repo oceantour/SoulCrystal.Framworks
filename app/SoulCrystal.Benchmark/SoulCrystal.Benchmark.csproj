@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<RootNamespace>SoulCrystal</RootNamespace>
@@ -7,9 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AutoMapper" Version="10.1.1" />
-		<PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
-		<PackageReference Include="ClosedXML.Report" Version="$(ClosedXMLReportPackageVersion)" />
+		<PackageReference Include="AutoMapper" />
+		<PackageReference Include="ClosedXML.Report" />
 	</ItemGroup>
 	
 </Project>

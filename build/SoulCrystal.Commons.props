@@ -1,70 +1,26 @@
 <Project>
-	<!-- Set project general label -->
-	<PropertyGroup>
-		<SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
-	</PropertyGroup>
+	<!-- Dependency management -->
+	<Import Project="Dependencies.props" />
 
-	<!-- Shared Package Versions -->
-	<Import Project="$(SourceRoot)/build/Dependencies.props" />
-	<Import Project="$(SourceRoot)/build/Dependencies.Microsoft.props" />
-	<Import Project="$(SourceRoot)/build/Dependencies.Other.props" />
-
-	<!-- Set common properties regarding assembly information and nuget packages -->
 	<PropertyGroup>
-		<Authors>OceanTour</Authors>
+		<!-- Set information about assemblies -->
+		<Authors>OcreaTour</Authors>
 		<Product>SoulCrystal</Product>
 		<Copyright>Copyright © 2022 SoulCrystal Development Team</Copyright>
 		<Company>SoulCrystal Development Team(cnhuatu@outlook.com)</Company>
+
+		<!-- Set information about nuget and repository -->
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/oceantour/SoulCrystal.Framworks</PackageProjectUrl>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/oceantour/SoulCrystal.Framworks.git</RepositoryUrl>
 		<NeutralLanguage>en-US</NeutralLanguage>
+
+		<!-- This is used to generate symbol package for Source Link -->
 		<IncludeSymbols>false</IncludeSymbols>
 		<IncludeSource>false</IncludeSource>
 	</PropertyGroup>
 
-	<!-- Ensure changes to this file cause project rebuilds -->
-	<PropertyGroup>
-		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<AspNetTargetFramework>net6.0</AspNetTargetFramework>
-		<TargetFramework>net6.0</TargetFramework>
-		<ImplicitUsings>true</ImplicitUsings>
-		<Nullable>annotations</Nullable>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>$(SourceRoot)/build/StrongKey.snk</AssemblyOriginatorKeyFile>
-	</PropertyGroup>
-	
-	<!-- Common compile parameters -->
-	<PropertyGroup>
-		<LangVersion>10.0</LangVersion>
-		<PlatformTarget>anycpu</PlatformTarget>
-		<Prefer32Bit>false</Prefer32Bit>
-		<TieredCompilation>true</TieredCompilation>
-		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<WarningsNotAsErrors>612,618</WarningsNotAsErrors>
-		<NoWarn>$(NoWarn);CS1591</NoWarn>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|$(AspNetTargetFramework)|anycpu'">
-		<Optimize>false</Optimize>
-		<DebugSymbols>True</DebugSymbols>
-		<DebugType>portable</DebugType>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|$(AspNetTargetFramework)|anycpu'">
-		<Optimize>true</Optimize>
-		<DebugType>portable</DebugType>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	
 	<!-- Versioning properties -->
 	<PropertyGroup>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -82,18 +38,18 @@
 			</PropertyGroup>
 		</Otherwise>
 	</Choose>
-	
+
 	<!-- For builds generated a date/time dependent version suffix -->
 	<PropertyGroup>
 		<VersionSuffix Condition="'$(VersionSuffix)'==''">cs</VersionSuffix>
 		<VersionSuffix Condition="'$(VersionDateSuffix)'!=''">$(VersionSuffix)-$(VersionSuffix)</VersionSuffix>
 	</PropertyGroup>
-	
+
 	<!-- Set output folder for created NuGet packages -->
 	<PropertyGroup>
 		<PackageOutputPath Condition="'$(PackageOutputPath)'==''">$(SourceRoot)/Artifacts/$(Configuration)</PackageOutputPath>
 	</PropertyGroup>
-	
+
 	<Choose>
 		<When Condition="'$(BUILD_SOURCEVERSION)' != ''">
 			<PropertyGroup>

@@ -1,34 +1,28 @@
 <Project>
-	<PropertyGroup Label="Package Versions">
-		<AspNetCoreVersion>5.0.12</AspNetCoreVersion>
-
-		<MicrosoftAspNetCoreAuthenticationFacebookPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationFacebookPackageVersion>
-		<MicrosoftAspNetCoreAuthenticationGooglePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationGooglePackageVersion>
-		<MicrosoftAspNetCoreAuthenticationTwitterPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationTwitterPackageVersion>
-		<MicrosoftAspNetCoreAuthenticationMicrosoftAccountPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationMicrosoftAccountPackageVersion>
-		<MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion>
-
-		<MicrosoftAspNetCoreDataProtectionAzureStoragePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreDataProtectionAzureStoragePackageVersion>
-		<MicrosoftAspNetCoreDataProtectionStackExchangeRedisPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreDataProtectionStackExchangeRedisPackageVersion>
-
-		<MicrosoftAspNetCoreMvcNewtonsoftJsonPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcNewtonsoftJsonPackageVersion>
-		<MicrosoftAspNetCoreMvcRazorRuntimeCompilationPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcRazorRuntimeCompilationPackageVersion>
-		<MicrosoftAspNetCoreMvcTestingPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreMvcTestingPackageVersion>
-
-		<MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion>
-		<MicrosoftEntityFrameworkCorePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCorePackageVersion>
-		<MicrosoftEntityFrameworkCoreAbstractionsPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreAbstractionsPackageVersion>
-		<MicrosoftEntityFrameworkCoreSqlServerPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqlServerPackageVersion>
-		<MicrosoftEntityFrameworkCoreSqlitePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqlitePackageVersion>
-		<MicrosoftEntityFrameworkCoreSqliteCorePackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreSqliteCorePackageVersion>
-		<MicrosoftEntityFrameworkCoreRelationalPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreRelationalPackageVersion>
-		<MicrosoftEntityFrameworkCoreAnalyzersPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreAnalyzersPackageVersion>
-		<MicrosoftEntityFrameworkCoreInMemoryPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreInMemoryPackageVersion>
-		<MicrosoftEntityFrameworkCoreDesignPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreDesignPackageVersion>
-		<MicrosoftEntityFrameworkCoreToolsPackageVersion>$(AspNetCoreVersion)</MicrosoftEntityFrameworkCoreToolsPackageVersion>
-
-		<MicrosoftAspNetCoreOwinPackageVersion>$(AspNetCoreVersion)</MicrosoftAspNetCoreOwinPackageVersion>
-		<MicrosoftExtensionsCachingStackExchangeRedisPackageVersion>$(AspNetCoreVersion)</MicrosoftExtensionsCachingStackExchangeRedisPackageVersion>
-		<MicrosoftExtensionsHttpPollyPackageVersion>$(AspNetCoreVersion)</MicrosoftExtensionsHttpPollyPackageVersion>
+	<!-- These versions are used for the NuGet packages that are dependent on the current TFM (default = net6.0) -->
+	<PropertyGroup>
+		<AspNetCorePackagesVersion>6.0.12</AspNetCorePackagesVersion>
+		<MicrosoftExtensionsPackagesVersion>6.0.12</MicrosoftExtensionsPackagesVersion>
 	</PropertyGroup>
+
+	<!-- 'Microsoft.AspNetCore' packages that are not included in the ASP.NET Core shared framework -->
+	<ItemGroup>
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.Facebook" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.Google" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Authentication.Twitter" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(AspNetCorePackagesVersion)" />
+		<PackageManagement Include="Microsoft.AspNetCore.Owin" Version="$(AspNetCorePackagesVersion)" />
+	</ItemGroup>
+
+	<!-- 'Microsoft.Extensions' packages that are not included in the ASP.NET Core shared framework -->
+	<ItemGroup>
+		<PackageManagement Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="$(MicrosoftExtensionsPackagesVersion)" />
+		<PackageManagement Include="Microsoft.Extensions.Http.Polly" Version="$(MicrosoftExtensionsPackagesVersion)" />
+	</ItemGroup>
 </Project>
