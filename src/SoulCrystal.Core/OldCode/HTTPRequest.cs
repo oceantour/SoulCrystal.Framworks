@@ -1,4 +1,4 @@
-﻿namespace SoulCrystal.Utilities
+﻿namespace SoulCrystal.OldCode
 {
     public class HTTPRequest
     {
