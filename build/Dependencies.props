@@ -1,84 +1,84 @@
 <Project>
-	<!-- Set the version number of the related link library -->
-	<Import Project="Dependencies.NetCore.props" />
-	<Import Project="Dependencies.Microsoft.props" />
+  <!-- Set the version number of the related link library -->
+  <Import Project="Dependencies.NetCore.props" />
+  <Import Project="Dependencies.Microsoft.props" />
 
-	<!-- The version referencing these nuget packages is net6.0 -->
-	<PropertyGroup>
-		<NLogVersion>5.1.0</NLogVersion>
-		<NLogWebVersion>5.2.0</NLogWebVersion>
-		
-		<SpanJsonVersion>4.0.0</SpanJsonVersion>
-		<YesSqlVersion>3.3.0</YesSqlVersion>
-		<ServiceStackVersion>6.5.0</ServiceStackVersion>
-		<XunitVersion>2.4.2</XunitVersion>
-	</PropertyGroup>
+  <!-- The version referencing these nuget packages is net6.0 -->
+  <PropertyGroup>
+    <NLogVersion>5.1.0</NLogVersion>
+    <NLogWebVersion>5.2.0</NLogWebVersion>
 
-	<ItemGroup>
-		<PackageManagement Include="NLog" Version="$(NLogVersion)" />
-		<PackageManagement Include="NLog.Schema" Version="$(NLogVersion)" />
-		<PackageManagement Include="NLog.WindowsEventLog" Version="$(NLogVersion)" />
+    <SpanJsonVersion>4.0.0</SpanJsonVersion>
+    <YesSqlVersion>3.3.0</YesSqlVersion>
+    <ServiceStackVersion>6.5.0</ServiceStackVersion>
+    <XunitVersion>2.4.2</XunitVersion>
+  </PropertyGroup>
 
-		<PackageManagement Include="NLog.Web" Version="$(NLogWebVersion)" />
-		<PackageManagement Include="NLog.Web.AspNetCore" Version="$(NLogWebVersion)" />
-		<PackageManagement Include="NLog.Extensions.Logging" Version="$(NLogWebVersion)" />
-		
-		<PackageManagement Include="NLog.Targets.Syslog" Version="7.0.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageManagement Include="NLog" Version="$(NLogVersion)" />
+    <PackageManagement Include="NLog.Schema" Version="$(NLogVersion)" />
+    <PackageManagement Include="NLog.WindowsEventLog" Version="$(NLogVersion)" />
 
-	<ItemGroup>
-		<PackageManagement Include="SpanJson" Version="$(SpanJsonVersion)" />
-		<PackageManagement Include="SpanJson.AspNetCore.Formatter" Version="$(SpanJsonVersion)" />
+    <PackageManagement Include="NLog.Web" Version="$(NLogWebVersion)" />
+    <PackageManagement Include="NLog.Web.AspNetCore" Version="$(NLogWebVersion)" />
+    <PackageManagement Include="NLog.Extensions.Logging" Version="$(NLogWebVersion)" />
 
-		<PackageManagement Include="Newtonsoft.Json" Version="13.0.2" />
-	</ItemGroup>
+    <PackageManagement Include="NLog.Targets.Syslog" Version="7.0.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageManagement Include="YesSql" Version="$(YesSqlVersion)" />
-		<PackageManagement Include="YesSql.Abstractions" Version="$(YesSqlVersion)" />
-		<PackageManagement Include="YesSql.Core" Version="$(YesSqlVersion)" />
+  <ItemGroup>
+    <PackageManagement Include="SpanJson" Version="$(SpanJsonVersion)" />
+    <PackageManagement Include="SpanJson.AspNetCore.Formatter" Version="$(SpanJsonVersion)" />
 
-		<PackageManagement Include="YesSql.Provider.SqlServer" Version="$(YesSqlVersion)" />
-		<PackageManagement Include="YesSql.Provider.Sqlite" Version="$(YesSqlVersion)" />
-		<PackageManagement Include="YesSql.Provider.MySql" Version="$(YesSqlVersion)" />
-		<PackageManagement Include="YesSql.Provider.PostgreSql" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
 
-		<PackageManagement Include="YesSql.Filters.Abstractions" Version="$(YesSqlVersion)" />
-		<PackageManagement Include="YesSql.Filters.Query" Version="$(YesSqlVersion)" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageManagement Include="YesSql" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="YesSql.Abstractions" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="YesSql.Core" Version="$(YesSqlVersion)" />
 
-	<ItemGroup>
-		<PackageManagement Include="ServiceStack" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.Text" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.Common" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.Interfaces" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="YesSql.Provider.SqlServer" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="YesSql.Provider.Sqlite" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="YesSql.Provider.MySql" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="YesSql.Provider.PostgreSql" Version="$(YesSqlVersion)" />
 
-		<PackageManagement Include="ServiceStack.Client" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.Mvc" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.Redis" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.Server" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="YesSql.Filters.Abstractions" Version="$(YesSqlVersion)" />
+    <PackageManagement Include="YesSql.Filters.Query" Version="$(YesSqlVersion)" />
+  </ItemGroup>
 
-		<PackageManagement Include="ServiceStack.OrmLite" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.OrmLite.SqlServer" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.OrmLite.Sqlite" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.OrmLite.MySql" Version="$(ServiceStackVersion)" />
-		<PackageManagement Include="ServiceStack.OrmLite.PostgreSql" Version="$(ServiceStackVersion)" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageManagement Include="ServiceStack" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.Text" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.Common" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.Interfaces" Version="$(ServiceStackVersion)" />
 
-	<ItemGroup>
-		<PackageManagement Include="xunit" Version="$(XunitVersion)" />
-		<PackageManagement Include="xunit.core" Version="$(XunitVersion)" />
-		<PackageManagement Include="xunit.assert" Version="$(XunitVersion)" />
+    <PackageManagement Include="ServiceStack.Client" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.Mvc" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.Redis" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.Server" Version="$(ServiceStackVersion)" />
 
-		<PackageManagement Include="xunit.runner.console" Version="$(XunitVersion)" />
-		<PackageManagement Include="xunit.runner.visualstudio" Version="$(XunitVersion)" />
+    <PackageManagement Include="ServiceStack.OrmLite" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.OrmLite.SqlServer" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.OrmLite.Sqlite" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.OrmLite.MySql" Version="$(ServiceStackVersion)" />
+    <PackageManagement Include="ServiceStack.OrmLite.PostgreSql" Version="$(ServiceStackVersion)" />
+  </ItemGroup>
 
-		<PackageManagement Include="xunit.analyzers" Version="1.1.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageManagement Include="xunit" Version="$(XunitVersion)" />
+    <PackageManagement Include="xunit.core" Version="$(XunitVersion)" />
+    <PackageManagement Include="xunit.assert" Version="$(XunitVersion)" />
 
-	<ItemGroup>
-		<PackageManagement Include="AutoMapper" Version="12.0.0" />
-		<PackageManagement Include="NodaTime" Version="3.1.6" />
-		<PackageManagement Include="ClosedXML.Report" Version="0.2.4" />
-	</ItemGroup>
+    <PackageManagement Include="xunit.runner.console" Version="$(XunitVersion)" />
+    <PackageManagement Include="xunit.runner.visualstudio" Version="$(XunitVersion)" />
+
+    <PackageManagement Include="xunit.analyzers" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageManagement Include="AutoMapper" Version="12.0.0" />
+    <PackageManagement Include="NodaTime" Version="3.1.6" />
+    <PackageManagement Include="ClosedXML.Report" Version="0.2.4" />
+  </ItemGroup>
 </Project>

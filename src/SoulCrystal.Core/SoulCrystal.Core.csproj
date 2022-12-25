@@ -1,16 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<RootNamespace>SoulCrystal</RootNamespace>
-		<AssemblyName>SoulCrystal.Core</AssemblyName>
-		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-	</PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>SoulCrystal</RootNamespace>
+    <AssemblyName>SoulCrystal.Core</AssemblyName>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
 
-	<PropertyGroup>
-		<PackageId>SoulCrystal.Core</PackageId>
-		<Title>SoulCrystal.Core</Title>
-		<Description>SoulCrystal.Core</Description>
-		<PackageTags>soul crystal</PackageTags>
-	</PropertyGroup>
-	
+  <PropertyGroup>
+    <PackageId>SoulCrystal.Core</PackageId>
+    <Title>SoulCrystal.Core</Title>
+    <Description>SoulCrystal.Core</Description>
+    <PackageTags>soul crystal</PackageTags>
+  </PropertyGroup>
+
 </Project>

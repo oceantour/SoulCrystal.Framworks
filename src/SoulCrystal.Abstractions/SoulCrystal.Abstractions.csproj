@@ -1,16 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<RootNamespace>SoulCrystal</RootNamespace>
-		<AssemblyName>SoulCrystal.Abstractions</AssemblyName>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	</PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>SoulCrystal</RootNamespace>
+    <AssemblyName>SoulCrystal.Abstractions</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
 
-	<PropertyGroup>
-		<PackageId>SoulCrystal.Abstractions</PackageId>
-		<Title>SoulCrystal.Abstractions</Title>
-		<Description>SoulCrystal.Abstractions</Description>
-		<PackageTags>soul crystal</PackageTags>
-	</PropertyGroup>
-	
+  <PropertyGroup>
+    <PackageId>SoulCrystal.Abstractions</PackageId>
+    <Title>SoulCrystal.Abstractions</Title>
+    <Description>SoulCrystal.Abstractions</Description>
+    <PackageTags>soul crystal</PackageTags>
+  </PropertyGroup>
+
 </Project>

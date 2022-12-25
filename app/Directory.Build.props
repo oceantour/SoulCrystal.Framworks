@@ -1,10 +1,10 @@
 <Project>
-	<Import Project="..\build\SoulCrystal.Commons.props" />
+  <Import Project="..\build\SoulCrystal.Commons.props" />
 
-	<PropertyGroup>
-		<SignAssembly>false</SignAssembly>
-		<IsPackable>false</IsPackable>
-		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-	</PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
 </Project>

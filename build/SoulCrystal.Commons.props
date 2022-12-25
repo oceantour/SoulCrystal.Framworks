@@ -1,75 +1,75 @@
 <Project>
-	<!-- Dependency management -->
-	<Import Project="Dependencies.props" />
+  <!-- Dependency management -->
+  <Import Project="Dependencies.props" />
 
-	<PropertyGroup>
-		<!-- Set information about assemblies -->
-		<Authors>OcreaTour</Authors>
-		<Product>SoulCrystal</Product>
-		<Copyright>Copyright © 2022 SoulCrystal Development Team</Copyright>
-		<Company>SoulCrystal Development Team(cnhuatu@outlook.com)</Company>
+  <PropertyGroup>
+    <!-- Set information about assemblies -->
+    <Authors>OcreaTour</Authors>
+    <Product>SoulCrystal</Product>
+    <Copyright>Copyright © 2022 SoulCrystal Development Team</Copyright>
+    <Company>SoulCrystal Development Team(cnhuatu@outlook.com)</Company>
 
-		<!-- Set information about nuget and repository -->
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/oceantour/SoulCrystal.Framworks</PackageProjectUrl>
-		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/oceantour/SoulCrystal.Framworks.git</RepositoryUrl>
-		<NeutralLanguage>en-US</NeutralLanguage>
+    <!-- Set information about nuget and repository -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/oceantour/SoulCrystal.Framworks</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/oceantour/SoulCrystal.Framworks.git</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
 
-		<!-- This is used to generate symbol package for Source Link -->
-		<IncludeSymbols>false</IncludeSymbols>
-		<IncludeSource>false</IncludeSource>
-	</PropertyGroup>
+    <!-- This is used to generate symbol package for Source Link -->
+    <IncludeSymbols>false</IncludeSymbols>
+    <IncludeSource>false</IncludeSource>
+  </PropertyGroup>
 
-	<!-- Versioning properties -->
-	<PropertyGroup>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<VersionPrefix Condition=" '$(VersionPrefix)'=='' ">1.0.0</VersionPrefix>
-	</PropertyGroup>
-	<Choose>
-		<When Condition="'$(TargetFramework)'=='net6.0'">
-			<PropertyGroup>
-				<FileVersion>1.0.0.1000</FileVersion>
-			</PropertyGroup>
-		</When>
-		<Otherwise>
-			<PropertyGroup>
-				<FileVersion>1.0.0.1100</FileVersion>
-			</PropertyGroup>
-		</Otherwise>
-	</Choose>
+  <!-- Versioning properties -->
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <VersionPrefix Condition=" '$(VersionPrefix)'=='' ">1.0.0</VersionPrefix>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(TargetFramework)'=='net6.0'">
+      <PropertyGroup>
+        <FileVersion>1.0.0.1000</FileVersion>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <FileVersion>1.0.0.1100</FileVersion>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
 
-	<!-- For builds generated a date/time dependent version suffix -->
-	<PropertyGroup>
-		<VersionSuffix Condition="'$(VersionSuffix)'==''">cs</VersionSuffix>
-		<VersionSuffix Condition="'$(VersionDateSuffix)'!=''">$(VersionSuffix)-$(VersionSuffix)</VersionSuffix>
-	</PropertyGroup>
+  <!-- For builds generated a date/time dependent version suffix -->
+  <PropertyGroup>
+    <VersionSuffix Condition="'$(VersionSuffix)'==''">cs</VersionSuffix>
+    <VersionSuffix Condition="'$(VersionDateSuffix)'!=''">$(VersionSuffix)-$(VersionSuffix)</VersionSuffix>
+  </PropertyGroup>
 
-	<!-- Set output folder for created NuGet packages -->
-	<PropertyGroup>
-		<PackageOutputPath Condition="'$(PackageOutputPath)'==''">$(SourceRoot)/Artifacts/$(Configuration)</PackageOutputPath>
-	</PropertyGroup>
+  <!-- Set output folder for created NuGet packages -->
+  <PropertyGroup>
+    <PackageOutputPath Condition="'$(PackageOutputPath)'==''">$(SourceRoot)/Artifacts/$(Configuration)</PackageOutputPath>
+  </PropertyGroup>
 
-	<Choose>
-		<When Condition="'$(BUILD_SOURCEVERSION)' != ''">
-			<PropertyGroup>
-				<GitHeadSha>$(BUILD_SOURCEVERSION)</GitHeadSha>
-			</PropertyGroup>
-		</When>
-		<When Condition="'$(BUILD_SOURCEVERSION)' == '' AND '$(GIT_COMMIT)' != ''">
-			<PropertyGroup>
-				<GitHeadSha>$(GIT_COMMIT)</GitHeadSha>
-			</PropertyGroup>
-		</When>
-		<Otherwise>
-			<PropertyGroup>
-				<GitHeadSha>&lt;developer build&gt;</GitHeadSha>
-				<DotGitDir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory).git'))</DotGitDir>
-				<HeadFileContent Condition="Exists('$(DotGitDir)/HEAD')">$([System.IO.File]::ReadAllText('$(DotGitDir)/HEAD').Trim())</HeadFileContent>
-				<RefPath Condition="$(HeadFileContent.StartsWith('ref: '))">$(DotGitDir)/$(HeadFileContent.Substring(5))</RefPath>
-				<GitHeadSha Condition="'$(RefPath)' != '' AND Exists('$(RefPath)')">$([System.IO.File]::ReadAllText('$(RefPath)').Trim())</GitHeadSha>
-				<GitHeadSha Condition="'$(HeadFileContent)' != '' AND '$(RefPath)' == ''">$(HeadFileContent)</GitHeadSha>
-			</PropertyGroup>
-		</Otherwise>
-	</Choose>
+  <Choose>
+    <When Condition="'$(BUILD_SOURCEVERSION)' != ''">
+      <PropertyGroup>
+        <GitHeadSha>$(BUILD_SOURCEVERSION)</GitHeadSha>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(BUILD_SOURCEVERSION)' == '' AND '$(GIT_COMMIT)' != ''">
+      <PropertyGroup>
+        <GitHeadSha>$(GIT_COMMIT)</GitHeadSha>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <GitHeadSha>&lt;developer build&gt;</GitHeadSha>
+        <DotGitDir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory).git'))</DotGitDir>
+        <HeadFileContent Condition="Exists('$(DotGitDir)/HEAD')">$([System.IO.File]::ReadAllText('$(DotGitDir)/HEAD').Trim())</HeadFileContent>
+        <RefPath Condition="$(HeadFileContent.StartsWith('ref: '))">$(DotGitDir)/$(HeadFileContent.Substring(5))</RefPath>
+        <GitHeadSha Condition="'$(RefPath)' != '' AND Exists('$(RefPath)')">$([System.IO.File]::ReadAllText('$(RefPath)').Trim())</GitHeadSha>
+        <GitHeadSha Condition="'$(HeadFileContent)' != '' AND '$(RefPath)' == ''">$(HeadFileContent)</GitHeadSha>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
 </Project>
