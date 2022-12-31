@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SoulCrystal.Webstie.Models;
 
@@ -15,6 +15,15 @@ namespace SoulCrystal.Webstie.Controllers
 
         public IActionResult Index()
         {
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "111");
+            }
+
             return View();
         }
 
