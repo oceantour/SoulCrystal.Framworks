@@ -1,4 +1,4 @@
-﻿namespace SoulCrystal.Other
+namespace SoulCrystal.Other
 {
     public class SemaphoreTest
     {
@@ -6,6 +6,7 @@
         // A padding interval to make the output more orderly.
         private static int padding;
 
+        /// <summary> 异步任务测试 </summary>
         public void SemaphorePro()
         {
             // 创建信号量对象 为阻塞状态
