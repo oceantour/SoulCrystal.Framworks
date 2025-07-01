@@ -6,7 +6,7 @@
 
   <PropertyGroup>
     <!-- Set information about assembly generation -->
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>true</ImplicitUsings>
     <Nullable>annotations</Nullable>
     <SignAssembly>true</SignAssembly>

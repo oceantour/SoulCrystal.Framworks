@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoulCrystal.Core", "SoulCry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoulCrystal.Logging.NLog", "src\SoulCrystal.Logging.NLog\SoulCrystal.Logging.NLog.csproj", "{E433C7C0-2982-4D4B-B3AC-9FF078FFA5DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoulCrystal.Webstie.New", "app\SoulCrystal.Webstie.New\SoulCrystal.Webstie.New.csproj", "{912CE41F-49E9-4F4D-839E-BAFDC7CDCBD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{E433C7C0-2982-4D4B-B3AC-9FF078FFA5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E433C7C0-2982-4D4B-B3AC-9FF078FFA5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E433C7C0-2982-4D4B-B3AC-9FF078FFA5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912CE41F-49E9-4F4D-839E-BAFDC7CDCBD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912CE41F-49E9-4F4D-839E-BAFDC7CDCBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912CE41F-49E9-4F4D-839E-BAFDC7CDCBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912CE41F-49E9-4F4D-839E-BAFDC7CDCBD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{501437D3-2638-4B2A-8F0B-EC01D1485406} = {2311E9D5-382A-4124-A1E5-7C338D5D79FA}
 		{97771133-EF81-4FCE-96E5-E503A3F8CB5C} = {2311E9D5-382A-4124-A1E5-7C338D5D79FA}
 		{E433C7C0-2982-4D4B-B3AC-9FF078FFA5DA} = {B4A8B7F7-B5D1-4F20-B9BE-8575C73DAC79}
+		{912CE41F-49E9-4F4D-839E-BAFDC7CDCBD7} = {0176B169-DC4C-44AD-B7A6-1EA43E915B3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {17C3BB67-E655-4515-B72E-FA03A1FBEB3F}
