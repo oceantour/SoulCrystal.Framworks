@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩色放射状圆环设计</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+        
+        .canvas-container {
+            flex: 1;
+            min-width: 500px;
+            min-height: 500px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        canvas {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .controls {
+            width: 300px;
+            padding: 25px;
+            background: #f8f9fc;
+            border-radius: 15px;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #4b6cb7;
+        }
+        
+        .control-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: #e0e5ec;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #4b6cb7;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(75, 108, 183, 0.6);
+        }
+        
+        .value-display {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #4b6cb7;
+            color: white;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            background: #3a5999;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
+        }
+        
+        button#reset {
+            background: #e74c3c;
+        }
+        
+        button#reset:hover {
+            background: #c0392b;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .description {
+            padding: 25px 40px;
+            background: #f8f9fc;
+            border-top: 1px solid #e0e5ec;
+        }
+        
+        .description h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: #4b6cb7;
+            margin-bottom: 15px;
+        }
+        
+        .feature h4 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        
+        .feature p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            background: #2c3e50;
+            color: #ecf0f1;
+            font-size: 1.05rem;
+        }
+        
+        @media (max-width: 900px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .controls {
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            .canvas-container {
+                min-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-circle-notch"></i> 彩色放射状圆环设计</h1>
+            <p class="subtitle">13个等比例黑色圆环，每个圆环有一条彩色直线延伸到中心点</p>
+        </header>
+        
+        <div class="content">
+            <div class="canvas-container">
+                <canvas id="ringCanvas" width="600" height="600"></canvas>
+            </div>
+            
+            <div class="controls">
+                <h2><i class="fas fa-sliders-h"></i> 控制面板</h2>
+                
+                <div class="control-group">
+                    <label for="ringCount"><i class="fas fa-layer-group"></i> 圆环数量</label>
+                    <input type="range" id="ringCount" min="5" max="20" value="13">
+                    <div class="value-display">
+                        <span>5</span>
+                        <span id="ringCountValue">13</span>
+                        <span>20</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="ringScale"><i class="fas fa-compress-alt"></i> 缩放比例</label>
+                    <input type="range" id="ringScale" min="70" max="95" value="85">
+                    <div class="value-display">
+                        <span>70%</span>
+                        <span id="ringScaleValue">85%</span>
+                        <span>95%</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="lineWidth"><i class="fas fa-pencil-alt"></i> 线条粗细</label>
+                    <input type="range" id="lineWidth" min="1" max="10" value="3">
+                    <div class="value-display">
+                        <span>细</span>
+                        <span id="lineWidthValue">3px</span>
+                        <span>粗</span>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button id="redraw">
+                        <i class="fas fa-sync-alt"></i> 重新生成
+                    </button>
+                    <button id="reset">
+                        <i class="fas fa-undo"></i> 重置设置
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h3>设计特点</h3>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-bullseye"></i>
+                    <h4>等比例圆环</h4>
+                    <p>13个黑色圆环从大到小等比例排列，缩放比例可自定义，创建出深度和层次感。</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-palette"></i>
+                    <h4>彩色放射线</h4>
+                    <p>每个圆环延伸出一条彩色直线到中心点，颜色使用HSL模式均匀分布，角度随机生成。</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-sliders-h"></i>
+                    <h4>交互式控制</h4>
+                    <p>通过控制面板可调整圆环数量、缩放比例和线条粗细，实时预览效果变化。</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 彩色放射状圆环设计 | 使用HTML5 Canvas实现</p>
+        </footer>
+    </div>
+
+    <script>
+        // 获取Canvas元素和上下文
+        const canvas = document.getElementById('ringCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 控制元素
+        const ringCountInput = document.getElementById('ringCount');
+        const ringCountValue = document.getElementById('ringCountValue');
+        const ringScaleInput = document.getElementById('ringScale');
+        const ringScaleValue = document.getElementById('ringScaleValue');
+        const lineWidthInput = document.getElementById('lineWidth');
+        const lineWidthValue = document.getElementById('lineWidthValue');
+        const redrawBtn = document.getElementById('redraw');
+        const resetBtn = document.getElementById('reset');
+        
+        // 初始化参数
+        let ringCount = 13;
+        let ringScale = 0.85;
+        let lineWidth = 3;
+        let angles = [];
+        
+        // 设置Canvas尺寸
+        function setupCanvas() {
+            const container = canvas.parentElement;
+            const size = Math.min(container.clientWidth, container.clientHeight) * 0.9;
+            canvas.width = size;
+            canvas.height = size;
+        }
+        
+        // 生成随机角度
+        function generateRandomAngles(count) {
+            const newAngles = [];
+            for (let i = 0; i < count; i++) {
+                newAngles.push(Math.random() * Math.PI * 2);
+            }
+            return newAngles;
+        }
+        
+        // 绘制圆环和直线
+        function drawRings() {
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const maxRadius = Math.min(centerX, centerY) * 0.8;
+            
+            // 清除Canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // 绘制中心点
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 8, 0, Math.PI * 2);
+            ctx.fillStyle = '#2c3e50';
+            ctx.fill();
+            
+            // 绘制每个圆环和直线
+            for (let i = 0; i < ringCount; i++) {
+                const radius = maxRadius * Math.pow(ringScale, i);
+                const hue = (i * 360 / ringCount) % 360;
+                const color = `hsl(${hue}, 80%, 50%)`;
+                
+                // 获取或生成角度
+                if (!angles[i]) {
+                    angles[i] = Math.random() * Math.PI * 2;
+                }
+                
+                // 计算圆环上的点坐标
+                const pointX = centerX + radius * Math.cos(angles[i]);
+                const pointY = centerY + radius * Math.sin(angles[i]);
+                
+                // 绘制直线
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(pointX, pointY);
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lineWidth;
+                ctx.lineCap = 'round';
+                ctx.stroke();
+                
+                // 绘制圆环上的点
+                ctx.beginPath();
+                ctx.arc(pointX, pointY, lineWidth * 1.5, 0, Math.PI * 2);
+                ctx.fillStyle = color;
+                ctx.fill();
+                
+                // 绘制黑色圆环
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = '#2c3e50';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        }
+        
+        // 初始化
+        function init() {
+            setupCanvas();
+            window.addEventListener('resize', setupCanvas);
+            
+            // 设置初始随机角度
+            angles = generateRandomAngles(ringCount);
+            
+            // 绘制初始图形
+            drawRings();
+            
+            // 设置控制事件
+            ringCountInput.addEventListener('input', () => {
+                ringCount = parseInt(ringCountInput.value);
+                ringCountValue.textContent = ringCount;
+                angles = generateRandomAngles(ringCount);
+                drawRings();
+            });
+            
+            ringScaleInput.addEventListener('input', () => {
+                const scaleValue = parseInt(ringScaleInput.value);
+                ringScale = scaleValue / 100;
+                ringScaleValue.textContent = `${scaleValue}%`;
+                drawRings();
+            });
+            
+            lineWidthInput.addEventListener('input', () => {
+                lineWidth = parseInt(lineWidthInput.value);
+                lineWidthValue.textContent = `${lineWidth}px`;
+                drawRings();
+            });
+            
+            redrawBtn.addEventListener('click', () => {
+                angles = generateRandomAngles(ringCount);
+                drawRings();
+            });
+            
+            resetBtn.addEventListener('click', () => {
+                ringCountInput.value = 13;
+                ringScaleInput.value = 85;
+                lineWidthInput.value = 3;
+                
+                ringCount = 13;
+                ringScale = 0.85;
+                lineWidth = 3;
+                
+                ringCountValue.textContent = '13';
+                ringScaleValue.textContent = '85%';
+                lineWidthValue.textContent = '3px';
+                
+                angles = generateRandomAngles(ringCount);
+                drawRings();
+            });
+        }
+        
+        init();
+    </script>
+</body>
+</html>

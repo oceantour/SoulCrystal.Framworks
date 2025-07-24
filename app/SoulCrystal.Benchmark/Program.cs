@@ -6,6 +6,5 @@ namespace SoulCrystal
         {
             Console.WriteLine("Hello, World!");
         }
-
     }
 }
